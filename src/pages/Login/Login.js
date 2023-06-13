@@ -21,7 +21,7 @@ const Login = ()=> {
   const refreshToken = async () => {
     try {
       const refreshToken = localStorage.getItem('refreshToken');
-      const res = await axios.post("http://localhost:8080/refresh", {refreshToken});
+      const res = await axios.post("https://todolistbackendadvanced.onrender.com/refresh", {refreshToken});
       const newAccessToken = res.data.accessToken;
       const newRefreshToken = res.data.refreshToken;
       localStorage.setItem('accessToken',newAccessToken);
@@ -101,7 +101,7 @@ const handlePasswordChange = (e) => {
     }
 
     try{
-    const response = await axios.post('http://localhost:8080/login',{
+    const response = await axios.post('https://todolistbackendadvanced.onrender.com/login',{
       "username":username,
       "password":password
     });

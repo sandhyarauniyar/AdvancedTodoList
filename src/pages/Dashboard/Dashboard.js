@@ -26,7 +26,7 @@ const Dashboard = () => {
     const fetchDashboardData = async() => {
       try{
         const accessToken = localStorage.getItem("accessToken");
-        const response = await axios.get('http://localhost:8080/dashboardData', {
+        const response = await axios.get('https://todolistbackendadvanced.onrender.com/dashboardData', {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -81,7 +81,7 @@ const Dashboard = () => {
       },
     };
 
-    const res = await axios.post('http://localhost:8080/logout',{
+    const res = await axios.post('https://todolistbackendadvanced.onrender.com/logout',{
       refreshToken
     },options); 
     localStorage.removeItem("accessToken");

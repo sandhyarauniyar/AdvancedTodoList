@@ -17,7 +17,7 @@ function App() {
         <div className="app">
         <Routes>
           <Route path="/login" element={<Login/>} />
-          <Route path="/dashboard" element={user.login ? <Dashboard/> : <Navigate to="/" /> }/>
+          <Route path="/dashboard" element={localStorage.getItem("isLogin") ? <Dashboard/> : <Navigate to="/" /> }/>
           <Route path="/error" element={<Error/>}/>
           <Route path="*" element={<Login/>} />
         </Routes>
