@@ -1,0 +1,44 @@
+.todoList__inpt{
+    border:none;
+    outline:none;
+}
+
+.todoList__inpt:focus {
+    border: none;
+}
+
+.todoList{
+    text-align: center;
+}
+
+.todoList_InputSection{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.button{
+    background-color: #f0c14b;
+    border: none;
+    border-radius: 5px;
+}
+
+.task{
+    border: 1px solid grey;
+    width: 400px;
+    margin-left: 36%;
+    background-color: lightgreen;
+    margin-top: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 10px;
+}
+
+.task-buttons{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
